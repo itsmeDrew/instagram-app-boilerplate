@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html class="no-js" ng-app="App">
+<head>
+  <!-- <base href="/"> -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Instagram App</title>
+  <link rel="stylesheet" href="assets/css/main.min.css">
+</head>
+
+<body ng-controller="AppCtrl as app">
+  <h2>posts</h2>
+  <ul>
+    <li ng-repeat="post in userPosts">
+     <img src="{{ post.images.thumbnail.url }}" alt="">
+    </li>
+  </ul>
+
+  <script src="assets/js/main.min.js"></script>
+</body>
+</html>
