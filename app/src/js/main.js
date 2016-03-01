@@ -3,7 +3,7 @@
 require('angular');
 require('./templates');
 
-require('./services/ig');
+require('./services/instagram');
 
 var app = angular.module('App', [
   'templates',

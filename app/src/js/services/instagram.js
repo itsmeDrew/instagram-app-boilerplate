@@ -2,7 +2,7 @@
 
 var app = angular.module('App.Service.Instagram', []);
 
-app.service('igData', igCtrl);
+app.service('instagram', igCtrl);
 
 function igCtrl ($http, $q) {
   var vm = this;
