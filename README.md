@@ -5,4 +5,4 @@ Simply an angular boilerplate with the instagram service setup to pull a user fe
 
 
 ### Why a boilerplate?
-Why do presidential candidates run ads when they clearly are going to lose? Because they can. Murica.
+Why do presidential candidates run ads when they clearly are going to lose? Because it makes them feel better about themselves. Murica.
