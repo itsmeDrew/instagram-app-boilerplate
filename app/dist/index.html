@@ -9,10 +9,19 @@
 </head>
 
 <body ng-controller="AppCtrl as app">
-  <h2>posts</h2>
-  <ul>
-    <li ng-repeat="post in userPosts">
-     <img src="{{ post.images.thumbnail.url }}" alt="">
+  <ul class="ig-feed">
+    <li class="ig-feed__post" ng-repeat="post in userPosts">
+      <a href="{{ post.link }}" class="ig-feed__link" target="_blank">
+        <img class="ig-feed__img" ng-src="{{ post.images.low_resolution.url }}" alt="{{ post.tags[0] }}">
+      </a>
+      <div class="ig-feed__info">
+        <p class="ig-feed__tags" ng-if="post.tags[0]">#{{ post.tags[0] }}</p>
+        <div class="ig-feed__likes">
+          <i class="ig-feed__likes-icon fa fa-heart"></i>
+          <span class="ig-feed__likes-count">{{ post.likes.count }}</span>
+        </div>
+
+      </div>
     </li>
   </ul>
 

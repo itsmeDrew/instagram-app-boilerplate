@@ -7,12 +7,12 @@ app.service('igData', igCtrl);
 function igCtrl ($http, $q) {
   var vm = this;
   var clientId = 'c01c2b540bd64074b836f876f81ef46e';
-  var userId = '31830872';
+  var userId = '479275138';
 
   vm.getUserData = getUserData;
 
   function getUserData(postCount) {
-    return $http.jsonp('https://api.instagram.com/v1/users/' + userId + '/media/recent/?client_id=' + clientId + '&callback=JSON_CALLBACK&filter=Inkwell')
+    return $http.jsonp('https://api.instagram.com/v1/users/' + userId + '/media/recent/?client_id=' + clientId + '&callback=JSON_CALLBACK&count=' + postCount)
       .then(function(response) {
         var _responseData = response.data;
         var _userData = _responseData.data;
